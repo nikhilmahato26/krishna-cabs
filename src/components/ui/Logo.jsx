@@ -15,15 +15,15 @@ const Logo = ({ variant = 'dark', className = '' }) => {
       className={`inline-flex select-none items-center ${className}`}
     >
       <div
-        className={`flex items-center justify-center overflow-hidden rounded-lg transition-transform hover:scale-[1.02] ${isDark
+        className={`flex items-center justify-center overflow-hidden transition-transform hover:scale-[1.02] ${isDark
           ? 'h-[120px] lg:h-[150px] py-0.5'
-          : 'bg-white px-4 py-2 h-20 shadow-soft'
+          : 'h-[90px] lg:h-[110px]'
           }`}
       >
         <img
           src="/logo.png"
           alt="Krishna Cabs Logo"
-          className="h-full w-auto object-contain"
+          className={`h-full w-auto object-contain ${!isDark ? 'brightness-0 invert' : ''}`}
         />
       </div>
     </Link>
