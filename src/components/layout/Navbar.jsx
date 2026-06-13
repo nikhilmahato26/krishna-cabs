@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-[0_1px_0_0_rgba(0,0,0,0.06)]">
-      <nav className="container-site flex h-[72px] items-center justify-between">
+      <nav className="container-site flex h-20 lg:h-24 items-center justify-between">
         {/* Mobile hamburger */}
         <button
           type="button"

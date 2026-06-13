@@ -5,9 +5,6 @@ import Button from '../ui/Button'
 import BookingForm from './BookingForm'
 import { CONTACT } from '../../data/siteData'
 
-// Scenic sunset highway backdrop (placeholder for the supplied hero artwork)
-const HERO_BG =
-  'https://hblimg.mmtcdn.com/content/hubble/img/destimg/mmt/destination/m_Dwarka_tv_destination_img_1_l_766_1147.jpg'
 const CAR_IMG =
   'https://acko-cms.ackoassets.com/1_10650055cf.jpg'
 
@@ -16,7 +13,18 @@ const Hero = () => {
     <section id="home" className="relative overflow-hidden bg-navy-950">
       {/* Background image + dark gradient overlay */}
       <div className="absolute inset-0">
-        <img src={HERO_BG} alt="" className="h-full w-full object-cover" />
+        {/* Mobile Background (Portrait) */}
+        <img
+          src="/hero-bg-mobile.jpg"
+          alt=""
+          className="h-full w-full object-cover sm:hidden"
+        />
+        {/* Desktop/Tablet Background (Landscape) */}
+        <img
+          src="/hero-bg-desktop.jpg"
+          alt=""
+          className="hidden h-full w-full object-cover sm:block"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-900/70 to-navy-950/60" />
       </div>
 

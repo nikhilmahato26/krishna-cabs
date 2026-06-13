@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------------
 
 export const CONTACT = {
-  phoneLabel: '9090 10 9292',
+  phoneLabel: '+91 9090 10 9292',
   phoneHref: 'tel:+919090109292',
   whatsappHref: 'https://wa.me/919090109292',
   facebookHref: 'https://www.facebook.com/share/1DqTN1sgtN/?mibextid=wwXIfr',
@@ -79,7 +79,7 @@ export const FOOTER_LINKS = {
       { label: 'About Us', to: '/#about' },
       { label: 'Our Fleet', to: '/#fleet' },
       { label: 'Tariff', to: '/#tariff' },
-      { label: 'Routes', to: '/#tariff' },
+      { label: 'Routes', to: '/#routes' },
       { label: 'Services', to: '/#services' },
       { label: 'Contact Us', to: '/#contact' },
     ],

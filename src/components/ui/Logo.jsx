@@ -17,7 +17,7 @@ const Logo = ({ variant = 'dark', className = '' }) => {
       <div
         className={`flex items-center justify-center overflow-hidden rounded-lg transition-transform hover:scale-[1.02] ${
           isDark 
-            ? 'h-[60px] py-0.5' 
+            ? 'h-[68px] lg:h-[84px] py-0.5' 
             : 'bg-white px-4 py-2 h-20 shadow-soft'
         }`}
       >

@@ -29,7 +29,7 @@ const ServicesSection = () => {
   ]
 
   return (
-    <section id="services" className="bg-white py-16 lg:py-20 scroll-mt-[72px]">
+    <section id="services" className="bg-white py-16 lg:py-20 scroll-mt-20 lg:scroll-mt-24">
       <div className="container-site text-center">
         <Reveal>
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Our Services</span>

@@ -14,7 +14,7 @@ const Panel = ({ children, className = '', ...props }) => (
 
 const FaresSection = () => {
   return (
-    <section id="tariff" className="py-14 lg:py-16 scroll-mt-[72px]">
+    <section id="tariff" className="py-14 lg:py-16 scroll-mt-20 lg:scroll-mt-24">
       <div className="container-site grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
         {/* One Way Fares */}
         <Reveal>
@@ -46,7 +46,7 @@ const FaresSection = () => {
 
         {/* Our Fleet & Per KM Rate */}
         <Reveal delay={0.1}>
-          <Panel id="fleet" className="h-full scroll-mt-[90px]">
+          <Panel id="fleet" className="h-full scroll-mt-[98px] lg:scroll-mt-[114px]">
             <SectionHeading className="mb-4">Our Fleet &amp; Per KM Rate</SectionHeading>
             <div>
               {FLEET.map((car) => (

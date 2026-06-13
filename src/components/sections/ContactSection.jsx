@@ -31,7 +31,7 @@ const ContactSection = () => {
   ]
 
   return (
-    <section id="contact" className="bg-cream py-16 lg:py-20 scroll-mt-[72px]">
+    <section id="contact" className="bg-cream py-16 lg:py-20 scroll-mt-20 lg:scroll-mt-24">
       <div className="container-site grid grid-cols-1 gap-12 lg:grid-cols-12">
         {/* Left Side: Contact details */}
         <div className="lg:col-span-5 text-left">

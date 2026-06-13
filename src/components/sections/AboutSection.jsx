@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react'
 import Reveal from '../ui/Reveal'
+import { CONTACT } from '../../data/siteData'
 
 /**
  * Premium "About Us" section detailing Krishna Cabs' values,
@@ -14,7 +15,7 @@ const AboutSection = () => {
   ]
 
   return (
-    <section id="about" className="bg-cream py-16 lg:py-20 scroll-mt-[72px]">
+    <section id="about" className="bg-cream py-16 lg:py-20 scroll-mt-20 lg:scroll-mt-24">
       <div className="container-site grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
         {/* Left: Text Content */}
         <div className="lg:col-span-7">
@@ -57,13 +58,13 @@ const AboutSection = () => {
           <Reveal delay={0.1}>
             <div className="relative overflow-hidden rounded-2xl shadow-card ring-1 ring-black/5">
               <img
-                src="https://www.asiaticlionlodge.com/static/images/jungle-safari-pic.jpg"
+                src="https://hblimg.mmtcdn.com/content/hubble/img/destimg/mmt/destination/m_Dwarka_tv_destination_img_1_l_766_1147.jpg"
                 alt="Comfortable travel with Krishna Cabs"
                 className="h-[350px] w-full object-cover transition-transform duration-500 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white text-left">
-                <p className="text-2xl font-black tracking-wide text-gold">9090 10 9292</p>
+                <p className="text-2xl font-black tracking-wide text-gold">{CONTACT.phoneLabel}</p>
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-200 mt-1">
                   Call us anytime for booking confirmation
                 </p>
