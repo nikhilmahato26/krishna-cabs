@@ -9,8 +9,18 @@ const FareTable = ({ rows }) => {
         <thead>
           <tr className="bg-navy text-white">
             <th className="px-4 py-3 font-semibold">Route</th>
-            <th className="px-4 py-3 text-center font-semibold">Dzire (₹)</th>
-            <th className="px-4 py-3 text-center font-semibold">Ertiga (₹)</th>
+            <th className="px-4 py-3 text-center font-semibold">
+              <div className="leading-tight">
+                <div>Dzire</div>
+                <div className="text-[11px] font-normal text-slate-300 mt-0.5 whitespace-nowrap">(Sedan)</div>
+              </div>
+            </th>
+            <th className="px-4 py-3 text-center font-semibold">
+              <div className="leading-tight">
+                <div>Ertiga</div>
+                <div className="text-[11px] font-normal text-slate-300 mt-0.5 whitespace-nowrap">(SUV)</div>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -20,8 +30,8 @@ const FareTable = ({ rows }) => {
               className={`border-t border-slate-200 ${i % 2 === 1 ? 'bg-slate-50' : 'bg-white'}`}
             >
               <td className="px-4 py-3 text-slate-700">{row.route}</td>
-              <td className="px-4 py-3 text-center font-medium text-slate-800">{row.dzire}</td>
-              <td className="px-4 py-3 text-center font-medium text-slate-800">{row.ertiga}</td>
+              <td className="px-4 py-3 text-center font-bold text-navy">₹{row.dzire}</td>
+              <td className="px-4 py-3 text-center font-bold text-navy">₹{row.ertiga}</td>
             </tr>
           ))}
         </tbody>

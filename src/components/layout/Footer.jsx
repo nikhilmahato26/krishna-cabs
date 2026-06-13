@@ -21,18 +21,20 @@ const Footer = () => {
         <div className="lg:col-span-1">
           <Logo variant="light" className="items-start" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-slate-400">
-            We provide reliable, safe and comfortable taxi service across Gujarat. Your satisfaction
-            is our top priority.
+            Krishna Cabs is a trusted taxi service in Junagadh providing One Way Taxi, Round Trip Taxi, Airport Transfer and Outstation Cab Service across Gujarat.
+
           </p>
           <div className="mt-6 flex items-center gap-3">
             {[
               { Icon: FaWhatsapp, href: CONTACT.whatsappHref, label: 'WhatsApp' },
-              { Icon: FaFacebookF, href: '#', label: 'Facebook' },
-              { Icon: FaInstagram, href: '#', label: 'Instagram' },
+              { Icon: FaFacebookF, href: CONTACT.facebookHref, label: 'Facebook' },
+              { Icon: FaInstagram, href: CONTACT.instagramHref, label: 'Instagram' },
             ].map(({ Icon, href, label }) => (
               <a
                 key={label}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-slate-200 transition-colors hover:border-gold hover:bg-gold hover:text-navy"
               >

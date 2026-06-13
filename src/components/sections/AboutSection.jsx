@@ -26,16 +26,16 @@ const AboutSection = () => {
               </h2>
               <span className="mt-3 block h-[3px] w-12 rounded-full bg-gold text-left" />
             </div>
-            
+
             <p className="mt-6 text-base leading-relaxed text-slate-600 text-left">
-              Krishna Cabs is Junagadh's leading taxi service, dedicated to providing safe, comfortable, 
-              and highly reliable travel experiences. Whether you need a quick one-way drop to Rajkot or 
-              Ahmedabad, a round-trip pilgrimage to Somnath and Dwarka, or local sightseeing around the 
+              Krishna Cabs is Junagadh's leading taxi service, dedicated to providing safe, comfortable,
+              and highly reliable travel experiences. Whether you need a quick one-way drop to Rajkot or
+              Ahmedabad, a round-trip pilgrimage to Somnath and Dwarka, or local sightseeing around the
               historic Girnar hills, we have the perfect ride for you.
             </p>
 
             <p className="mt-4 text-base leading-relaxed text-slate-600 text-left">
-              We focus on passenger convenience, delivering premium fleet vehicles driven by courteous professionals 
+              We focus on passenger convenience, delivering premium fleet vehicles driven by courteous professionals
               committed to transparent billing and prompt service.
             </p>
 
@@ -57,7 +57,7 @@ const AboutSection = () => {
           <Reveal delay={0.1}>
             <div className="relative overflow-hidden rounded-2xl shadow-card ring-1 ring-black/5">
               <img
-                src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80"
+                src="https://www.asiaticlionlodge.com/static/images/jungle-safari-pic.jpg"
                 alt="Comfortable travel with Krishna Cabs"
                 className="h-[350px] w-full object-cover transition-transform duration-500 hover:scale-105"
               />

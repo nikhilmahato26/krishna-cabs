@@ -28,15 +28,15 @@ const Navbar = () => {
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="text-navy lg:hidden"
+          className="text-navy lg:hidden order-3"
         >
           {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
 
-        <Logo className="lg:-ml-2" />
+        <Logo className="lg:-ml-2 order-2 lg:order-1" />
 
         {/* Desktop nav */}
-        <ul className="hidden items-center gap-7 xl:gap-9 lg:flex">
+        <ul className="hidden items-center gap-7 xl:gap-9 lg:flex lg:order-2">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
               <Link
@@ -57,7 +57,7 @@ const Navbar = () => {
         {/* Phone CTA */}
         <a
           href={CONTACT.phoneHref}
-          className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2.5 text-sm font-bold text-navy transition-colors hover:bg-gold-600"
+          className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2.5 text-sm font-bold text-navy transition-colors hover:bg-gold-600 order-1 lg:order-3"
         >
           <Phone className="h-4 w-4" />
           <span className="hidden sm:inline">{CONTACT.phoneLabel}</span>

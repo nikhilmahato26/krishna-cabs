@@ -1,7 +1,6 @@
 import { ShieldCheck } from 'lucide-react'
 
-const FLEET_LINEUP =
-  'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=70'
+const FLEET_LINEUP = '/safety-image.png'
 
 /**
  * Dark "Your Safety, Our Priority" panel sitting beside the fare tables, with
@@ -24,7 +23,7 @@ const SafetyCard = () => {
         src={FLEET_LINEUP}
         alt="Krishna Cabs fleet line-up"
         loading="lazy"
-        className="mt-6 h-28 w-full object-cover opacity-90"
+        className="mt-6 w-full object-contain opacity-90"
       />
     </div>
   )

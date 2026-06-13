@@ -7,6 +7,8 @@ export const CONTACT = {
   phoneLabel: '9090 10 9292',
   phoneHref: 'tel:+919090109292',
   whatsappHref: 'https://wa.me/919090109292',
+  facebookHref: 'https://www.facebook.com/share/1DqTN1sgtN/?mibextid=wwXIfr',
+  instagramHref: 'https://www.instagram.com/krishnacabs_official?igsh=MTdleTNoeTh1Z2E0aQ==',
   email: 'Krishnacabsofficial@gmail.com',
   emailHref: 'mailto:Krishnacabsofficial@gmail.com',
   address: 'Junagadh, Gujarat, India',
@@ -58,13 +60,13 @@ export const FARE_NOTES = [
 
 // Image thumbnails use lightweight remote car photos as placeholders.
 export const FLEET = [
-  { name: 'Dzire', seats: '4 Seater', rate: 12, img: 'https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=200&q=70' },
-  { name: 'Aura', seats: '4 Seater', rate: 12, img: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=200&q=70' },
-  { name: 'Ertiga (SUV)', seats: '6 Seater', rate: 14, img: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=200&q=70' },
-  { name: 'Innova / Carens', seats: '6 Seater', rate: 17, img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=200&q=70' },
-  { name: 'Innova Crysta', seats: '6 Seater', rate: 20, img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=200&q=70' },
-  { name: 'Tempo Traveller', seats: '12 Seater', rate: 30, img: 'https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?auto=format&fit=crop&w=200&q=70' },
-  { name: 'Urbania', seats: '17 Seater', rate: 40, img: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=200&q=70' },
+  { name: 'Dzire', seats: '4 Seater', rate: 12, img: 'https://images.91wheels.com/assets/c_images/gallery/maruti/dzire-tour/maruti-dzire-tour-0-1766751051.png?w=850&q=40' },
+  { name: 'Aura', seats: '4 Seater', rate: 12, img: 'https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Aura/10125/1762429751468/front-left-side-47.jpg' },
+  { name: 'Ertiga (SUV)', seats: '6 Seater', rate: 14, img: 'https://images.91wheels.com/assets/c_images/gallery/maruti/ertiga-2018-2022/maruti-ertiga-2018-2022-0-1766751514.png' },
+  { name: 'Innova / Carens', seats: '6 Seater', rate: 17, img: 'https://cdn.carhp.in/toyota/toyota_innova_hycross_super_white.jpg?format=webp&width=800&q=75' },
+  { name: 'Innova Crysta', seats: '6 Seater', rate: 20, img: 'https://media.zigcdn.com/media/model/2025/Dec/toyota-innova-crysta_360x240.jpg' },
+  { name: 'Tempo Traveller', seats: '12 Seater', rate: 30, img: 'https://cdn.bluebirdtravels.in/wp-content/uploads/2017/01/Tempo_Traveller_PI-531x354.png' },
+  { name: 'Urbania', seats: '17 Seater', rate: 40, img: 'https://cdn.motorbazee.com/ImageData/model/800x600/195439.jpg' },
 ]
 
 // Car options for the booking form's "Select Car" dropdown
@@ -74,12 +76,12 @@ export const FOOTER_LINKS = {
   quickLinks: {
     title: 'QUICK LINKS',
     items: [
-      { label: 'About Us', to: '/about' },
-      { label: 'Our Fleet', to: '/fleet' },
-      { label: 'Tariff', to: '/tariff' },
-      { label: 'Routes', to: '/routes' },
-      { label: 'Services', to: '/services' },
-      { label: 'Contact Us', to: '/contact' },
+      { label: 'About Us', to: '/#about' },
+      { label: 'Our Fleet', to: '/#fleet' },
+      { label: 'Tariff', to: '/#tariff' },
+      { label: 'Routes', to: '/#tariff' },
+      { label: 'Services', to: '/#services' },
+      { label: 'Contact Us', to: '/#contact' },
     ],
   },
   services: {

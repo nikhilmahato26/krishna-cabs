@@ -7,7 +7,7 @@ import { CONTACT } from '../../data/siteData'
 
 // Scenic sunset highway backdrop (placeholder for the supplied hero artwork)
 const HERO_BG =
-  'https://static3.toyotabharat.com/images/showroom/innova-mmc/unmatched-unrivaled-banner1600x850.webp'
+  'https://hblimg.mmtcdn.com/content/hubble/img/destimg/mmt/destination/m_Dwarka_tv_destination_img_1_l_766_1147.jpg'
 const CAR_IMG =
   'https://acko-cms.ackoassets.com/1_10650055cf.jpg'
 

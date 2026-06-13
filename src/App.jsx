@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import FloatingActions from './components/ui/FloatingActions'
 import Home from './pages/Home'
 import Placeholder from './pages/Placeholder'
 import useScrollToTop from './hooks/useScrollToTop'
@@ -26,6 +27,7 @@ const App = () => {
         </Routes>
       </main>
       <Footer />
+      <FloatingActions />
     </div>
   )
 }
