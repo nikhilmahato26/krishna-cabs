@@ -15,11 +15,10 @@ const Logo = ({ variant = 'dark', className = '' }) => {
       className={`inline-flex select-none items-center ${className}`}
     >
       <div
-        className={`flex items-center justify-center overflow-hidden rounded-lg transition-transform hover:scale-[1.02] ${
-          isDark 
-            ? 'h-[68px] lg:h-[84px] py-0.5' 
-            : 'bg-white px-4 py-2 h-20 shadow-soft'
-        }`}
+        className={`flex items-center justify-center overflow-hidden rounded-lg transition-transform hover:scale-[1.02] ${isDark
+          ? 'h-[120px] lg:h-[150px] py-0.5'
+          : 'bg-white px-4 py-2 h-20 shadow-soft'
+          }`}
       >
         <img
           src="/logo.png"
