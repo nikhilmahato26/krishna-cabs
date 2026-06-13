@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { MapPin, ChevronDown } from 'lucide-react'
 import Button from '../ui/Button'
-import { CAR_OPTIONS } from '../../data/siteData'
+import { CAR_OPTIONS, CONTACT } from '../../data/siteData'
 
 /**
  * "Book Your Taxi" card shown on the right of the hero. Self-contained,
@@ -29,8 +29,23 @@ const BookingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Placeholder — integrate with booking/API here.
-    console.log('Booking request:', form)
+
+    if (!form.from || !form.to) {
+      alert('Please fill out both pickup and drop locations.')
+      return
+    }
+
+    const message = `Hello Krishna Cabs, I would like to book a taxi.
+
+*Booking Details:*
+• *Pickup Location:* ${form.from}
+• *Drop Location:* ${form.to}
+• *Selected Car:* ${form.car || 'Any Available Car'}
+• *Journey Type:* ${form.journey === 'oneway' ? 'One Way' : 'Round Trip'}`
+
+    const encodedText = encodeURIComponent(message)
+    const whatsappUrl = `${CONTACT.whatsappHref}?text=${encodedText}`
+    window.open(whatsappUrl, '_blank')
   }
 
   return (
