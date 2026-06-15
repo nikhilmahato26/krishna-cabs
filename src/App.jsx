@@ -4,6 +4,8 @@ import Footer from './components/layout/Footer'
 import FloatingActions from './components/ui/FloatingActions'
 import Home from './pages/Home'
 import Placeholder from './pages/Placeholder'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsConditions from './pages/TermsConditions'
 import useScrollToTop from './hooks/useScrollToTop'
 
 const App = () => {
@@ -21,8 +23,8 @@ const App = () => {
           <Route path="/routes" element={<Placeholder title="Routes" />} />
           <Route path="/services" element={<Placeholder title="Services" />} />
           <Route path="/contact" element={<Placeholder title="Contact Us" />} />
-          <Route path="/privacy" element={<Placeholder title="Privacy Policy" />} />
-          <Route path="/terms" element={<Placeholder title="Terms & Conditions" />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsConditions />} />
           <Route path="*" element={<Placeholder title="Page Not Found" />} />
         </Routes>
       </main>

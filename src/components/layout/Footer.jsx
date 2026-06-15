@@ -20,7 +20,7 @@ const Footer = () => {
         {/* Brand */}
         <div className="lg:col-span-1">
           <Logo variant="light" className="items-start" />
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-slate-400">
+          <p className="-mt-6 max-w-xs text-sm leading-relaxed text-slate-400">
             Krishna Cabs is a trusted taxi service in Junagadh providing One Way Taxi, Round Trip Taxi, Airport Transfer and Outstation Cab Service across Gujarat.
 
           </p>
