@@ -16,11 +16,11 @@ const Footer = () => {
 
   return (
     <footer className="bg-slate-50 text-slate-600 border-t border-slate-200">
-      <div className="container-site grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="container-site grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 lg:grid-cols-5">
         {/* Brand */}
         <div className="lg:col-span-1">
-          <Logo variant="dark" height="h-20 lg:h-24" className="items-start" />
-          <p className="mt-2 max-w-xs text-sm leading-relaxed text-slate-600">
+          <Logo variant="dark" height="h-20 lg:h-36" className="items-start  -mt-16" />
+          <p className="-mt-10 max-w-xs text-sm leading-relaxed text-slate-600">
             Krishna Cabs is a trusted taxi service in Junagadh providing One Way Taxi, Round Trip Taxi, Airport Transfer and Outstation Cab Service across Gujarat.
           </p>
           <div className="mt-6 flex items-center gap-3">
