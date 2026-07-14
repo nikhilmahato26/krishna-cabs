@@ -11,7 +11,7 @@ export const CONTACT = {
   instagramHref: 'https://www.instagram.com/krishnacabs_official?igsh=MTdleTNoeTh1Z2E0aQ==',
   email: 'Krishnacabsofficial@gmail.com',
   emailHref: 'mailto:Krishnacabsofficial@gmail.com',
-  address: 'Junagadh, Gujarat, India',
+  address: '118 , First Floor , Star Platinum Complex , Near Madhuram Gate , Junagadh - 362001',
 }
 
 export const NAV_LINKS = [

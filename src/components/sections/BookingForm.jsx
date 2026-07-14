@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MapPin, ChevronDown } from 'lucide-react'
+import { MapPin, ChevronDown, Calendar, Clock } from 'lucide-react'
 import Button from '../ui/Button'
 import { CAR_OPTIONS, CONTACT } from '../../data/siteData'
 
@@ -23,6 +23,10 @@ const BookingForm = () => {
     to: '',
     car: '',
     journey: 'oneway',
+    pickupDate: '',
+    pickupTime: '',
+    dropDate: '',
+    dropTime: '',
   })
 
   const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }))
@@ -30,18 +34,31 @@ const BookingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (!form.from || !form.to) {
-      alert('Please fill out both pickup and drop locations.')
+    if (!form.from || !form.to || !form.pickupDate || !form.pickupTime) {
+      alert('Please fill out all pickup details: location, date, and time.')
       return
     }
 
-    const message = `Hello Krishna Cabs, I would like to book a taxi.
+    if (form.journey === 'roundtrip' && (!form.dropDate || !form.dropTime)) {
+      alert('Please fill out return details (date and time) for a Round Trip booking.')
+      return
+    }
+
+    let message = `Hello Krishna Cabs, I would like to book a taxi.
 
 *Booking Details:*
 • *Pickup Location:* ${form.from}
 • *Drop Location:* ${form.to}
 • *Selected Car:* ${form.car || 'Any Available Car'}
-• *Journey Type:* ${form.journey === 'oneway' ? 'One Way' : 'Round Trip'}`
+• *Journey Type:* ${form.journey === 'oneway' ? 'One Way' : 'Round Trip'}
+• *Pickup Date:* ${form.pickupDate}
+• *Pickup Time:* ${form.pickupTime}`
+
+    if (form.journey === 'roundtrip') {
+      message += `
+• *Drop Date:* ${form.dropDate}
+• *Drop Time:* ${form.dropTime}`
+    }
 
     const encodedText = encodeURIComponent(message)
     const whatsappUrl = `${CONTACT.whatsappHref}?text=${encodedText}`
@@ -61,6 +78,7 @@ const BookingForm = () => {
             <MapPin className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gold" />
             <input
               type="text"
+              required
               value={form.from}
               onChange={update('from')}
               placeholder="Enter pickup location"
@@ -74,6 +92,7 @@ const BookingForm = () => {
             <MapPin className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gold" />
             <input
               type="text"
+              required
               value={form.to}
               onChange={update('to')}
               placeholder="Enter drop location"
@@ -103,7 +122,7 @@ const BookingForm = () => {
         </Field>
 
         {/* Journey type */}
-        <div className="mb-5">
+        <div className="mb-4">
           <label className="mb-2 block text-xs font-medium text-slate-300">Journey Type</label>
           <div className="flex items-center gap-8">
             {[
@@ -128,7 +147,65 @@ const BookingForm = () => {
           </div>
         </div>
 
-        <Button type="submit" variant="gold" className="w-full py-3 text-base">
+        <div className="grid grid-cols-2 gap-3.5 mb-3.5">
+          <Field label="Pickup Date">
+            <div className="relative">
+              <Calendar className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gold" />
+              <input
+                type="date"
+                required
+                value={form.pickupDate}
+                onChange={update('pickupDate')}
+                className={`${inputBase} pl-9 pr-2`}
+              />
+            </div>
+          </Field>
+
+          <Field label="Pickup Time">
+            <div className="relative">
+              <Clock className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gold" />
+              <input
+                type="time"
+                required
+                value={form.pickupTime}
+                onChange={update('pickupTime')}
+                className={`${inputBase} pl-9 pr-2`}
+              />
+            </div>
+          </Field>
+        </div>
+
+        {form.journey === 'roundtrip' && (
+          <div className="grid grid-cols-2 gap-3.5 mb-3.5">
+            <Field label="Drop Date">
+              <div className="relative">
+                <Calendar className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gold" />
+                <input
+                  type="date"
+                  required
+                  value={form.dropDate}
+                  onChange={update('dropDate')}
+                  className={`${inputBase} pl-9 pr-2`}
+                />
+              </div>
+            </Field>
+
+            <Field label="Drop Time">
+              <div className="relative">
+                <Clock className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gold" />
+                <input
+                  type="time"
+                  required
+                  value={form.dropTime}
+                  onChange={update('dropTime')}
+                  className={`${inputBase} pl-9 pr-2`}
+                />
+              </div>
+            </Field>
+          </div>
+        )}
+
+        <Button type="submit" variant="gold" className="w-full mt-2 py-3 text-base">
           Book Now
         </Button>
       </form>
